@@ -1,32 +1,32 @@
-# ตอนที่ 11 - Class & Instance Variable
+# ตอ��ที�� 11 - Class & Instance Variable
 
-class Employee: #การสร้างคลาส
+class Employee: #��ารสร��า����ลาส
     # class vatiable 
     _minSalary = 12000
     _maxSalary = 50000
-    _companyName = "บริษัทxyzจำกัด"
+    _companyName = "��ริษัทxyz��ำ��ัด"
 #----------------------------------------------------------------
     def __init__ (self,name,salary,department):
         #Protected Attribute
-        self.__name = name #กำหนด Attribute 
-        self.__salary = salary #กำหนด Attribute 
-        self.__department = department #กำหนด Attribute 
+        self.__name = name #��ำห��ด Attribute 
+        self.__salary = salary #��ำห��ด Attribute 
+        self._department = department #��ำห��ด Attribute 
     
     #Private Method
     ''' def _showData(self):
-        print("ชื่อพนักงาน = {}".format(self.__name))
-        print("เงินเดือน = {}".format(self.__salary))
-        print("เเผนก = {}".format(self.__department))  '''
+        print("��ื��อ����ั����า�� = {}".format(self.__name))
+        print("เ��ิ��เดือ�� = {}".format(self.__salary))
+        print("เเ������ = {}".format(self.__department))  '''
 
     
     def _showData(self):
-        print("ชื่อพนักงาน = "+self.__name)
-        print("เงินเดือน = ",format(self.__salary))
-        print("เเผนก = "+self._department) 
+        print("��ื��อ����ั����า�� = "+self.__name)
+        print("เ��ิ��เดือ�� = ",format(self.__salary))
+        print("เเ������ = "+self._department) 
     
 '''
 #----------------------------------------------------------------
-    #ปรับค่าตัวเเปรในเมธอด(setter)
+    #��รั������าตัวเเ��ร����เม��อด(setter)
     def setName(self,newname):
         self.__name = newname
 
@@ -36,7 +36,7 @@ class Employee: #การสร้างคลาส
     def setDepartment(self,newdepartment):
         self.__department = newdepartment
 #-----------------------------------------------------------------
-    #รับค่าจากตัวเเปรในเมธอด(getter)
+    #รั������า��า��ตัวเเ��ร����เม��อด(getter)
     
     def getName(self):
         return self.__name
@@ -51,9 +51,9 @@ class Employee: #การสร้างคลาส
 '''
 
 
-#การสร้างวัตถุ
+#��ารสร��า��วัตถุ
 obj1 = Employee("tao",5000,"mhee")
 
 
-print("เงินเดือนต่ำสุดของพนักงาน = "+str(Employee._maxSalary))
+print("เ��ิ��เดือ��ต��ำสุด��อ������ั����า�� = "+str(Employee._maxSalary))
 print(obj1._companyName)

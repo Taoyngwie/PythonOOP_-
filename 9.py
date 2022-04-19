@@ -1,52 +1,52 @@
-# ตอนที่ 11 - Class & Instance Variable
+# เธ•เธญเธ�เธ—เธตเน� 11 - Class & Instance Variable
 
-class Employee: #การสร้างคลาส
+class Employee: #เธ�เธฒเธฃเธชเธฃเน�เธฒเธ�เธ�เธฅเธฒเธช
     # class vatiable 
     _minSalary = 12000
     _maxSalary = 50000
-    __companyName = "บริษัทxyzจำกัด"
+    __companyName = "เธ�เธฃเธดเธฉเธฑเธ—xyzเธ�เธณเธ�เธฑเธ”"
 #----------------------------------------------------------------
     def __init__ (self,name,salary,department):
         #Protected Attribute
-        self.__name = name #กำหนด Attribute 
-        self.__salary = salary #กำหนด Attribute 
-        self.__department = department #กำหนด Attribute 
+        self.__name = name #เธ�เธณเธซเธ�เธ” Attribute 
+        self.__salary = salary #เธ�เธณเธซเธ�เธ” Attribute 
+        self.__department = department #เธ�เธณเธซเธ�เธ” Attribute 
     
     #Private Method
     ''' def _showData(self):
-        print("ชื่อพนักงาน = {}".format(self.__name))
-        print("เงินเดือน = {}".format(self.__salary))
-        print("เเผนก = {}".format(self.__department))  '''
+        print("เธ�เธทเน�เธญเธ�เธ�เธฑเธ�เธ�เธฒเธ� = {}".format(self.__name))
+        print("เน€เธ�เธดเธ�เน€เธ”เธทเธญเธ� = {}".format(self.__salary))
+        print("เน€เน€เธ�เธ�เธ� = {}".format(self.__department))  '''
 
     
     def _showData(self):
-        print("ชื่อพนักงาน = "+self.__name)
-        print("เงินเดือน = ",format(self.__salary))
-        print("เเผนก = "+self._department) 
+        print("เธ�เธทเน�เธญเธ�เธ�เธฑเธ�เธ�เธฒเธ� = "+self.__name)
+        print("เน€เธ�เธดเธ�เน€เธ”เธทเธญเธ� = ",format(self.__salary))
+        print("เน€เน€เธ�เธ�เธ� = "+self._department) 
     
-class Accounting(Employee): #สืบทอดคลาสมาจาก Employee
-    __departmentName = "พนักงานบัญชี"
+class Accounting(Employee): #เธชเธทเธ�เธ—เธญเธ”เธ�เธฅเธฒเธชเธกเธฒเธ�เธฒเธ� Employee
+    __departmentName = "เธ�เธ�เธฑเธ�เธ�เธฒเธ�เธ�เธฑเธ�เธ�เธต"
     def __init__ (self): #default constructor
         pass
         
 
-class Programmer(Employee): #สืบทอดคลาสมาจาก Employee
-    __departmentName = "โปรเเกรมเมอร์"
+class Programmer(Employee): #เธชเธทเธ�เธ—เธญเธ”เธ�เธฅเธฒเธชเธกเธฒเธ�เธฒเธ� Employee
+    __departmentName = "เน�เธ�เธฃเน€เน€เธ�เธฃเธกเน€เธกเธญเธฃเน�"
     def __init__ (self): #default constructor
         pass
 
-class Sale(Employee): #สืบทอดคลาสมาจาก Employee
-    __departmentName = "พนักงานขาย"
+class Sale(Employee): #เธชเธทเธ�เธ—เธญเธ”เธ�เธฅเธฒเธชเธกเธฒเธ�เธฒเธ� Employee
+    __departmentName = "เธ�เธ�เธฑเธ�เธ�เธฒเธ�เธ�เธฒเธข"
     def __init__ (self): #default constructor
         pass
 
 
-#การสร้างวัตถุ
+#เธ�เธฒเธฃเธชเธฃเน�เธฒเธ�เธงเธฑเธ•เธ–เธธ
 account = Accounting()
-print(account._Employee__companyName) #เข้าถึงตัวเเบบ Private
+print(account._Employee__companyName) #เน€เธ�เน�เธฒเธ–เธถเธ�เธ•เธฑเธงเน€เน€เธ�เธ� Private
 
 programmer = Programmer()
-print(programmer._minSalary)  #เข้าถึงตัวเเบบ Protected
+print(programmer._minSalary)  #เน€เธ�เน�เธฒเธ–เธถเธ�เธ•เธฑเธงเน€เน€เธ�เธ� Protected
 sale = Sale()
 
 
@@ -55,5 +55,5 @@ sale = Sale()
 obj1 = Employee("tao",5000,"mhee")
 
 
-print("เ��ิ��เดือ��ต��ำสุด��อ������ั����า�� = "+str(Employee._maxSalary))
+print(str(Employee._maxSalary))
 print(obj1._companyName)'''
